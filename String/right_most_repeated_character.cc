@@ -2,7 +2,7 @@
 using namespace std;
 
 
-char leftMost_Repeat(string str)
+char rightMost_Repeat(string str)
 {
     int count[256], temp=INT_MIN;
     int n=str.length();
@@ -33,7 +33,7 @@ int main()
     getline(cin,str);
 
     cout<<"The right most repeated character is: ";
-    cout<<"'"<<leftMost_Repeat(str)<<"'"<<endl;
+    cout<<"'"<<rightMost_Repeat(str)<<"'"<<endl;
 
     return 0;
 }

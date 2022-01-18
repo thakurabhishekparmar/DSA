@@ -10,7 +10,7 @@ char rightMost_nonRepeat(string str)
     for(int i=0;i<n;i++)
         count[str[i]]++;
     
-    for(int i=n;i>=0;i--)
+    for(int i=n-1;i>=0;i--)
         if(count[str[i]] == 1)
             return str[i];
 

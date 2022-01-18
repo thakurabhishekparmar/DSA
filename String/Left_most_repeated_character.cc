@@ -8,10 +8,12 @@ using namespace std;
 // char leftMost_Repeat(string str)
 // {
 //     int count[256]={0};
-//     for(int i=0;i<str.length();i++)
+//     int n=str.length();
+//
+//     for(int i=0;i<n;i++)
 //         count[str[i]]++;
 
-//     for(int i=0;i<str.length();i++)
+//     for(int i=0;i<n;i++)
 //     {
 //         if(count[str[i]] > 1)
 //             return str[i];
@@ -25,11 +27,11 @@ using namespace std;
 char leftMost_Repeat(string str)
 {
     int count[256], temp=INT_MAX;
-
+    int n=str.length();
     for(int i=0;i<256;i++)
         count[i]=-1;
 
-    for(int i=0;i<str.length();i++)
+    for(int i=0;i<n;i++)
     {
         if(count[str[i]] == -1)
             count[str[i]]=i;

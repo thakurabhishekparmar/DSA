@@ -3,15 +3,17 @@ using namespace std;
 
 int anagram(string str1,string str2)
 {
-    if(str1.length() != str2.length())
+    int n=str1.length();
+    int m=str2.length();
+    if(n != m)
         return 0;
 
     int count[256]={0};
 
-    for(int i=0;i<str1.length();i++)
+    for(int i=0;i<n;i++)
         count[str1[i]]++;
 
-    for(int i=0;i<str2.length();i++)
+    for(int i=0;i<m;i++)
         count[str2[i]]--;
 
     for(int i=0;i<256;i++){

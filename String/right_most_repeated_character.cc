@@ -5,11 +5,12 @@ using namespace std;
 char leftMost_Repeat(string str)
 {
     int count[256], temp=INT_MIN;
+    int n=str.length();
 
     for(int i=0;i<256;i++)
         count[i]=-1;
 
-    for(int i=str.length()-1;i>=0;i--)
+    for(int i=n-1;i>=0;i--)
     {
         if(count[str[i]] == -1)
             count[str[i]]=i;

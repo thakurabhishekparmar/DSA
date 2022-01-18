@@ -6,11 +6,11 @@ using namespace std;
 char rightMost_nonRepeat(string str)
 {
     int count[256]={0};
-    
-    for(int i=0;i<str.length();i++)
+    int n=str.length();
+    for(int i=0;i<n;i++)
         count[str[i]]++;
     
-    for(int i=str.length();i>=0;i--)
+    for(int i=n;i>=0;i--)
         if(count[str[i]] == 1)
             return str[i];
 
@@ -23,11 +23,11 @@ char rightMost_nonRepeat(string str)
 int rightMost_nonRepeat(string str)
 {
     int count[256], temp=INT_MIN;
-
+    int n=str.length();
     for(int i=0;i<256;i++)
         count[i]=-1;
     
-    for(int i=str.length()-1;i>=0;i--)         
+    for(int i=n-1;i>=0;i--)         
     {                                               
         if(count[str[i]] == -1)             
         {

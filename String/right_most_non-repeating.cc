@@ -3,7 +3,7 @@ using namespace std;
 
 //      Approach 1: 
 /*
-char leftMost_nonRepeat(string str)
+char rightMost_nonRepeat(string str)
 {
     int count[256]={0};
     

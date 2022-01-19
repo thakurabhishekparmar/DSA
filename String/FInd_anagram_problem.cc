@@ -33,7 +33,7 @@ int findAnagram(string txt,string ptr)
         count_txt[txt[i]]++;
     }
 
-    for(i=m ; i<n; i++)
+    for(i=m ; i<=n; i++)
     {
         if(isCountSame(count_txt,count_ptr))
             return 1;
@@ -57,10 +57,10 @@ int main()
     int ans=findAnagram(txt,ptr);
 
     if(ans)
-        cout<< "'" << ptr << "'" << " is Present in "<<txt<<" the string" <<endl;
+        cout<< "'" << ptr << "'" << " is Present in '"<<txt<<"' string" <<endl;
     
     else
-        cout<< "'" << ptr <<"'" << " is not Present in "<< txt <<" the string" <<endl;
+        cout<< "'" << ptr <<"'" << " is not Present in '"<< txt <<"' string" <<endl;
 
     return 0;
 }
